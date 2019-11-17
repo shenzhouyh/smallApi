@@ -1,5 +1,5 @@
 // pages/home/home.js
-import {config} from "../../config/config";
+import {theme} from "../../model/theme";
 
 Page({
 
@@ -7,33 +7,18 @@ Page({
      * 页面的初始数据
      */
     data: {
-        topTheme:null,
+        topTheme: null,
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-        wx.request({
-            //es6模板字符串
-            url:`${config.apiBaseUrl}theme/by/names`,
-            //url:"http://se.7yue.pro/v1/theme/by/names",
-            method:"GET",
-            data:{
-                names:"t-1"
-            },
-            header:{
-                appKey:config.appKey
-            },
-            //使用箭头函数，解决this指向错误问题，可以保证this的指代是不变的
-            success:res => {
-                console.log(res);
-                this.setData({
-                    topTheme:res.data[0]
-                })
-            }
-
-        })
+    onLoad: function () {
+        theme.getHomeThemeLocalationA(data => {
+            this.setData({
+                topTheme: data[0]
+            })
+        });
 
     },
 
