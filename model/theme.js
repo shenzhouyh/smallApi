@@ -14,9 +14,6 @@ class theme {
             url: "theme/by/names",
             data: {
                 names: "t-1"
-            },
-            callback: data => {
-                callback(data)
             }
         })
 

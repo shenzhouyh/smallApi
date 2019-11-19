@@ -4,3 +4,8 @@
     height: 260rpx;
 
 }
+
+.swiper-img {
+    width: 100%;
+    height: 360rpx;
+}

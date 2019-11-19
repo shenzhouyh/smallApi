@@ -1,4 +1,14 @@
 <!--pages/home/home.wxml-->
 <view>
-    <image src="{{topTheme.entrance_img}}" class="top-theme"></image>
+    <image src="{{themeA.entrance_img}}" class="top-theme"></image>
+
+    <!--轮播图组件-->
+    <swiper class="swiper-img" indicator-dots="{{true}}" autoplay circular>
+        <block wx:for="{{bannerB.items}}">
+            <!--自定义插槽-->
+            <swiper-item>
+                <image src="{{item.img}}" class="swiper-img"></image>
+            </swiper-item>
+        </block>
+    </swiper>
 </view>
