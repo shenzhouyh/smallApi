@@ -13,12 +13,11 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function () {
-        theme.getHomeThemeLocalationA(data => {
-            this.setData({
-                topTheme: data[0]
-            })
-        });
+    onLoad: async function () {
+        const data = await theme.getHomeThemeLocalationA();
+        this.setData({
+            topTheme:data[0]
+        })
 
     },
 
