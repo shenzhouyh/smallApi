@@ -1,0 +1,22 @@
+{
+  "name": "shenzhou",
+  "version": "0.1.0",
+  "description": "神舟电商小程序",
+  "main": "app.js",
+  "dependencies": {
+    "lin-ui": "~0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shenzhouyh/smallApi.git"
+  },
+  "author": "yinhao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shenzhouyh/smallApi/issues"
+  },
+  "homepage": "https://github.com/shenzhouyh/smallApi#readme"
+}
