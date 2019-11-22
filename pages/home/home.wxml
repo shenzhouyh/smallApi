@@ -12,7 +12,7 @@
         </block>
     </swiper>
     <s-category-grid grid="{{grid}}">
-
     </s-category-grid>
+    <image src="{{activity.entrance_img}}" class="activity"></image>
 
 </view>

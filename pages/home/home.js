@@ -2,6 +2,7 @@
 import {theme} from "../../model/theme";
 import {Banner} from "../../model/banner";
 import {CategoryGrid} from "../../model/categoryGrid";
+import {Activity} from "../../model/activity";
 
 Page({
 
@@ -12,6 +13,7 @@ Page({
         themeA: null,
         bannerB: null,
         grid: [],
+        activity: null,
     },
 
     /**
@@ -22,13 +24,15 @@ Page({
     },
 
     async initAllData() {
-        const bannerB = await Banner.getHomeLocationB();
         const themeA = await theme.getHomeThemeLocalationA();
-        const grid = await CategoryGrid.getCategoryGride();
+        const bannerB = await Banner.getHomeLocationB();
+        const gridC = await CategoryGrid.getHomeLocationC();
+        const activityD = await Activity.getHomeLocationD()
         this.setData({
             themeA: themeA[0],
             bannerB: bannerB,
-            grid: grid
+            grid: gridC,
+            activity: activityD
         })
     },
 
