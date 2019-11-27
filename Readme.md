@@ -57,6 +57,13 @@
  - 函数式变成简介
     - 常用的函数
         - filter、find、map、reduce、some等
-        - e·g：`const theme = themes.find(t=>t.name==='t-1')`,筛选名称为t-1的主题         
-        
+        - e·g：`const theme = themes.find(t=>t.name==='t-1')`,筛选名称为t-1的主题
+ ### 第四天
+ - 页面数据的缓存方法
+    - 缓存（需要对缓存进行管理）
+    - 全局app（全局参数可放在里面）
+    - 当前页面的属性值（this.data.themes = themes）
+    - 对象
+ - 面向对象的思想
+    类可以保存数据，但不能保存状态；对象是可以保存数据，也可以保存状态。`const t1 =new theme(); t1.a =1`       
 

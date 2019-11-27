@@ -26,20 +26,24 @@ Page({
 
     async initAllData() {
         //const themeA = await theme.getHomeThemeLocalationA();
-        const themes = theme.getThemes();
+        //const themes = await theme.getThemes();
+        const themes = new theme();
+        await themes.getThemes();
+        const themeA = await themes.getHomeThemeLocalationA();
+        const themeE = await themes.getHomeThemeLocalationE();
         /*for (let theme of themes) {
             if (theme.name === 't-1') {
 
             }
         }*/
         //find、filter、map、reduce、some
-        const themeA = themes.find(t => t.name === 't-1');
-        const themeE = themes.find(t => t.name === 't-2');
+        //const themeA = themes.find(t => t.name === 't-1');
+        //const themeE = themes.find(t => t.name === 't-2');
         const bannerB = await Banner.getHomeLocationB();
         const gridC = await CategoryGrid.getHomeLocationC();
         const activityD = await Activity.getHomeLocationD()
         this.setData({
-            themeA,
+            themeA: themeA,
             bannerB: bannerB,
             grid: gridC,
             activity: activityD,

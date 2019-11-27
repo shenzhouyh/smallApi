@@ -12,10 +12,12 @@ class theme {
     static locationE = 't-2';
     static locationF = 't-3';
     static locationG = 't-4';
+    themes = [];
 
-    static async getThemes() {
+//批量获取主题
+    async getThemes() {
         const names = `${theme.locationA},${theme.locationE},${theme.locationF},${theme.locationG}`
-        return await http.request({
+        this.themes = await http.request({
             url: "theme/by/names",
             data: {
                 names
@@ -23,14 +25,12 @@ class theme {
         })
     }
 
-    //加入回调函数参数
-    static async getHomeThemeLocalationA() {
-        return await http.request({
-            url: "theme/by/names",
-            data: {
-                names: theme.locationA
-            }
-        })
+    async getHomeThemeLocalationA() {
+        return await this.themes.find(t => t.name === theme.locationA);
+    }
+
+    async getHomeThemeLocalationE() {
+        return await this.themes.find(t => t.name === theme.locationE);
     }
 
     //
