@@ -15,6 +15,7 @@ Page({
         grid: [],
         activity: null,
         themeE: null,
+        themeESpu: null
     },
 
     /**
@@ -31,14 +32,13 @@ Page({
         await themes.getThemes();
         const themeA = await themes.getHomeThemeLocalationA();
         const themeE = await themes.getHomeThemeLocalationE();
-        /*for (let theme of themes) {
-            if (theme.name === 't-1') {
-
+        let themeESpu = [];
+        if (themeE.online) {
+            const data = await theme.getHomeLocationESpu();
+            if (data) {
+                themeESpu = data.spu_list.slice(0, 8);
             }
-        }*/
-        //find、filter、map、reduce、some
-        //const themeA = themes.find(t => t.name === 't-1');
-        //const themeE = themes.find(t => t.name === 't-2');
+        }
         const bannerB = await Banner.getHomeLocationB();
         const gridC = await CategoryGrid.getHomeLocationC();
         const activityD = await Activity.getHomeLocationD()
@@ -47,7 +47,8 @@ Page({
             bannerB: bannerB,
             grid: gridC,
             activity: activityD,
-            themeE
+            themeE,
+            themeESpu
         })
     },
 

@@ -33,7 +33,16 @@ class theme {
         return await this.themes.find(t => t.name === theme.locationE);
     }
 
-    //
+    static getHomeLocationESpu() {
+        return theme.getThemeSpuByName(theme.locationE);
+    }
+
+    //获取单个专题详情（带有spu）
+    static getThemeSpuByName(name) {
+        return http.request({
+            url: `theme/name/${name}/with_spu`
+        });
+    }
 }
 
 export {
