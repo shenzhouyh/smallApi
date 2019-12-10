@@ -65,12 +65,18 @@
     - 当前页面的属性值（this.data.themes = themes）
     - 对象
  - 面向对象的思想
+ 
     类可以保存数据，但不能保存状态；对象是可以保存数据，也可以保存状态。`const t1 =new theme(); t1.a =1`
+    
  - 改写getThemes()方法
+ 
     使用面向对象思想改写获取主题的方法，将多个主题获取之后放到对象中，对外提供获取主题的方法 
- - SPU和SKU概念(调研之后形成手记或教程，//TODO 待附加链接)
+    
+ - SPU和SKU概念(调研之后形成手记或教程， [商品的SPU和SKU](https://blog.csdn.net/shenzhou_yh/article/details/103461026) )
+ 
     SPU：Standard Product Unit 标准化产品单元
     SKU：Stock keeping Unit  库存量单位
+    
  - 技术的输入和输出
     - 表达能力、逻辑思维能力、编程思维、学习编程知识、坚持写博客
 ### 第五天
