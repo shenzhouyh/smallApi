@@ -1,1 +1,14 @@
-/* components/spu-scroller/index.wxss */
+.title {
+    width: 692rpx;
+    height: 90rpx;
+}
+
+.price-unit {
+    font-size: 28px !important;
+    color: #157658 !important;
+}
+
+.price-value {
+    font-size: 32px !important;
+    color: #157658 !important;
+}

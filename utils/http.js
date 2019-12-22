@@ -14,7 +14,7 @@ class http{
             data,
             method,
             header:{
-                appKey:"NIUg9jsXK3OjEXGi"
+              appKey:`${config.appKey}`
             }
         })
         return res.data
