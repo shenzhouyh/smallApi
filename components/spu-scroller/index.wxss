@@ -1,14 +1,47 @@
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 42rpx 0 34rpx 28rpx;
+}
 .title {
     width: 692rpx;
     height: 90rpx;
 }
 
 .price-unit {
-    font-size: 28px !important;
+    font-size: 28rpx !important;
     color: #157658 !important;
 }
 
 .price-value {
-    font-size: 32px !important;
+    font-size: 32rpx !important;
     color: #157658 !important;
+}
+
+.spu-img {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.spu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-view {
+    display: flex;
+    flex-direction: row;
+}
+
+.inner {
+    display: flex;
+    flex-direction: row;
+}
+
+.spu-text {
+    font-size: 20rpx;
+    color: #666666;
+    margin-top: 20rpx;
 }

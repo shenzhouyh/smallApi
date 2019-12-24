@@ -92,3 +92,13 @@
  
  组件样式和外部类样式并没有明确的优先级关系，所以在强烈需要使用外部类样式时，最好加上！important
 
+### 第六天
+- scroll-view组件
+    * 开启scroll-view对于flex布局的支持——enable-flex
+    * 开启scroll-view的横向滑动——scroll-x
+- css编写原则
+    * 多尝试，从尝试中寻求最佳方案
+    * 尽量不要给容器设置固定的宽高（width：100%容易产生横向滚动条，可以不指定宽度，或者和box-sizing: border-box;一起使用）
+    * 从代码中抽象出原则，便于后面的最佳实践
+- wxs(javascript)
+    小程序的逻辑层和视图层是分离的，wxs是专门用于wxml页面的，主要在视图层调用函数
