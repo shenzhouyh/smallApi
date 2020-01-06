@@ -32,6 +32,7 @@ Page({
         await themes.getThemes();
         const themeA = await themes.getHomeThemeLocalationA();
         const themeE = await themes.getHomeThemeLocalationE();
+
         let themeESpu = [];
         if (themeE.online) {
             const data = await theme.getHomeLocationESpu();
@@ -39,6 +40,7 @@ Page({
                 themeESpu = data.spu_list.slice(0, 8);
             }
         }
+        const themeF = await themes.getHomeThemeLocalationF();
         const bannerB = await Banner.getHomeLocationB();
         const gridC = await CategoryGrid.getHomeLocationC();
         const activityD = await Activity.getHomeLocationD()
@@ -48,7 +50,8 @@ Page({
             grid: gridC,
             activity: activityD,
             themeE,
-            themeESpu
+            themeESpu,
+            themeF
         })
     },
 

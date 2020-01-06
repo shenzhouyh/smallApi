@@ -102,3 +102,12 @@
     * 从代码中抽象出原则，便于后面的最佳实践
 - wxs(javascript)
     小程序的逻辑层和视图层是分离的，wxs是专门用于wxml页面的，主要在视图层调用函数
+### 第七天
+- WXS的使用
+    - 引入：`<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="s"></wxs>`,指定引入的地址以及模块别名
+    - 使用：`<text class="spu-text">{{item.title.length>8?s.substring(item.title,0,7)+"...":item.title}}</text>`，调用wxs文件中的字符串截取方法
+- 原生组件和自定义组件的边距问题（image组件和s-spu-scroll组件的边距问题）
+
+    1、设置image组件的下边距，可以生效<br>
+    2、设置s-spu-scroll的上边距，不生效，尽量不要直接更改自定义组件的内部样式，可以采用外部样式类进行指定修改<br>
+    3、可以使用原生组件view进行包裹，然后对整个view设置上边距<br>

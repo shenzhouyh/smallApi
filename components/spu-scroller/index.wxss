@@ -3,6 +3,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 42rpx 0 34rpx 28rpx;
+    background-color: #ffffff;
 }
 .title {
     width: 692rpx;
@@ -44,4 +45,9 @@
     font-size: 20rpx;
     color: #666666;
     margin-top: 20rpx;
+    /**文本省略*/
+    /*overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;*/
+
 }

@@ -33,6 +33,10 @@ class theme {
         return await this.themes.find(t => t.name === theme.locationE);
     }
 
+    async getHomeThemeLocalationF() {
+        return await this.themes.find(t => t.name === theme.locationF);
+    }
+
     static getHomeLocationESpu() {
         return theme.getThemeSpuByName(theme.locationE);
     }
