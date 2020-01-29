@@ -7,11 +7,18 @@
 import {http} from "../utils/http";
 
 class Banner {
-    static locationB = 'b-1'
+    static locationB = 'b-1';
+    static locationG = 'b-2';
 
     static async getHomeLocationB() {
         return await http.request({
             url: `banner/name/${this.locationB}`
+        })
+    }
+
+    static async getHomeLocationG() {
+        return await http.request({
+            url: `banner/name/${this.locationG}`
         })
     }
 }

@@ -111,3 +111,14 @@
     1、设置image组件的下边距，可以生效<br>
     2、设置s-spu-scroll的上边距，不生效，尽量不要直接更改自定义组件的内部样式，可以采用外部样式类进行指定修改<br>
     3、可以使用原生组件view进行包裹，然后对整个view设置上边距<br>
+### 第八天
+- hot-list组件
+    - 组件创建步骤：<br>
+        - 新建组件component
+        - 调用方的json文件中引入组件，并使用别名，如"s-hot-list": "/components/hot-list/index"
+        - 调用方的页面使用组件，并进行数据绑定，如<s-hot-list banner="{{bannerG}}"><s-hot-list>
+        - 构建组件内容，搭建骨架<br>
+- 监听器        
+    - 新式监听器的使用:
+        - 新式监听器的声明：observers:{}
+        - 监听对象的绑定：observers:{'banner':function(banner){}}'',监听banner对象
