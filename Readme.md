@@ -122,3 +122,12 @@
     - 新式监听器的使用:
         - 新式监听器的声明：observers:{}
         - 监听对象的绑定：observers:{'banner':function(banner){}}'',监听banner对象
+- 点击态(页面组件的点击动画)
+    - view组件自带对点击态的支持，参考 [微信开发文档](https://developers.weixin.qq.com/miniprogram/dev/component/view.html)
+    `<view hover-class="rect-hover" hover-stay-time="300"></view>`
+    hover-class：引用自定义组件的样式，hover-stay-time：点击态的保留时间
+    - 使用@import关键字导入外部样式，因为点击态需要进行复用，所以最好保存在一个全局文件中中，当使用的时候直接进行引入就行。
+    例如：@import "../../wxss/wxss.wxss"(指明引入的路径)
+    > 既然是全局使用，为什么不放到app.wxss文件中呢？
+    因为小程序的组件具备封闭性，app.wxss中的样式只能在page中使用,而不能在自定义组件中调用
+    
