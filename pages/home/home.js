@@ -25,6 +25,7 @@ Page({
      */
     async onLoad() {
         this.initAllData();
+        this.initBottomSpuList();
     },
     async initBottomSpuList() {
         const paging = await SpuPaging.getLateast();
