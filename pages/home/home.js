@@ -3,6 +3,7 @@ import {Banner} from "../../model/banner";
 import {CategoryGrid} from "../../model/categoryGrid";
 import {Activity} from "../../model/activity";
 import {theme} from "../../model/theme";
+import {SpuPaging} from "../../model/spu-paging";
 
 Page({
 
@@ -24,6 +25,13 @@ Page({
      */
     async onLoad() {
         this.initAllData();
+    },
+    async initBottomSpuList() {
+        const paging = await SpuPaging.getLateast();
+        const data = paging.getMoreData();
+        if (!data) {
+            return
+        }
     },
 
     async initAllData() {
