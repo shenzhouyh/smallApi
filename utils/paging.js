@@ -13,7 +13,7 @@ class Paging {
     locker = false
     req
     url
-    moreData
+    moreData = true;
     accumulator = []
 
     /**
@@ -22,10 +22,11 @@ class Paging {
      * @param start 起始条数
      * @param count 获取的数据条数
      */
-    constructor(req, start, count) {
+    constructor(req, start = 0, count = 10) {
         this.count = count
         this.start = start
         this.req = req
+        this.url = req.url
     }
 
     /**
@@ -71,7 +72,7 @@ class Paging {
         this.moreData = this._moreData(paging.total_page, paging.page)
         //将起始值累加数量
         if (this.moreData) {
-            this.start += count
+            this.start += this.count
         }
         //累加条目
         this._accumulator(paging.items)
@@ -84,13 +85,13 @@ class Paging {
         }
 
 
-        return {
+        /*return {
             empty: boolean,
             items: [],
             moreData: boolean,
             accumulator: []
 
-        }
+        }*/
     }
 
     _accumulator(items) {
@@ -116,7 +117,7 @@ class Paging {
         let url = this.url
         const params = `start=${this.start}&count=${this.count}`
         //分两种情况，有？和没有？号
-        if (url.indexOf('?') !== -1) {
+        if (url.includes('?')) {
             url += '&' + params
         } else {
             url += '?' + params
