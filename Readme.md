@@ -149,4 +149,15 @@
   - 标签组件
   - 原价和折扣价的关系，以及如何合理的展示
 - 使用抽象节点
+### 第十一天
+- 使用wxs文件处理主价和划线价关系
+  - 主价逻辑：当折扣价存在时，主价为折扣价，否则主价为现价
+  - 划线价逻辑：当折扣价存在时，现价为划线价，否则不展示划线价
+  - wx:if判断折扣价是否为空
+  - wxs文件引用，`<wxs src="../../wxs/price.wxs" module="p"></wxs>`
+  - wxs文件使用：
+  `<l-price value="{{p.mainPrice(data.price,data.discount_price)}}"></l-price>
+        <l-price wx:if="{{data.discount_price?true:false}}"
+                 deleted
+                 value="{{p.slashedPrice(data.price,data.discount_price)}}"></l-price>`
 
