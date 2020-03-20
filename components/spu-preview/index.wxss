@@ -18,6 +18,11 @@
     height: 360rpx;
 }
 
+.tags {
+    display: flex;
+    flex-direction: row;
+}
+
 .l-tag {
     background-color: #DCEBE6 !important;
     color: #157658 !important;

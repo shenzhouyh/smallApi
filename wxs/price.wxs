@@ -1,0 +1,28 @@
+/**
+ * 主价格
+ * @param price
+ * @param discountPrice
+ */
+function mainPrice(price, discountPrice) {
+    if (discountPrice) {
+        return discountPrice;
+    } else {
+        return price;
+    }
+};
+
+/**
+ * 划线价格
+ * @param price
+ * @param discountPrice
+ */
+function slashedPrice(price, discountPrice) {
+    if (discountPrice) {
+        return price;
+    }
+}
+
+module.exports = {
+    mainPrice: mainPrice,
+    slashedPrice: slashedPrice
+}
