@@ -160,4 +160,13 @@
         <l-price wx:if="{{data.discount_price?true:false}}"
                  deleted
                  value="{{p.slashedPrice(data.price,data.discount_price)}}"></l-price>`
-
+- 瀑布流中动态的计算图片的宽高
+  - 监听图片的加载完成动作，bindload="onImgLoad",在回调函数中获取图片的实际宽高
+  - 保持图片不变形的要领：保持宽高比
+  - 已知当前瀑布流的宽以及图片时间宽高，可以推算出瀑布流中的高度
+  - 样式也可以采用数据绑定的方式进行传值
+  `style="width={{w}}rpx;height={{h}}rpx"`
+- 使用loadMore组件
+  - 长页面的加载状态应该只有两种，加载中和没有更多数据
+  - 加载中状态是常态，在没有更多数据这个状态之前，底部应该都是加载中的状态
+  - 加载完成只是个中间状态，用于每次分页的请求，可以不作为状态考虑

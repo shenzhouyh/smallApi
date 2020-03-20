@@ -1,34 +1,36 @@
 <!--pages/home/home.wxml-->
-<view>
-    <image src="{{themeA.entrance_img}}" class="top-theme"></image>
+<l-loadmore show="{{true}}" type="{{loadingType}}">
+    <view slot="content">
+        <image src="{{themeA.entrance_img}}" class="top-theme"></image>
 
-    <!--轮播图组件-->
-    <swiper class="swiper-img" indicator-dots="{{true}}" autoplay circular>
-        <block wx:for="{{bannerB.items}}">
-            <!--自定义插槽-->
-            <swiper-item>
-                <image src="{{item.img}}" class="swiper-img"></image>
-            </swiper-item>
-        </block>
-    </swiper>
-    <s-category-grid grid="{{grid}}">
-    </s-category-grid>
-    <image src="{{activity.entrance_img}}" class="activity"></image>
-    <s-spu-scroll
-            theme="{{themeE}}"
-            spu-list="{{themeESpu}}"
-            wx:if="{{themeE.online}}">
+        <!--轮播图组件-->
+        <swiper class="swiper-img" indicator-dots="{{true}}" autoplay circular>
+            <block wx:for="{{bannerB.items}}">
+                <!--自定义插槽-->
+                <swiper-item>
+                    <image src="{{item.img}}" class="swiper-img"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <s-category-grid grid="{{grid}}">
+        </s-category-grid>
+        <image src="{{activity.entrance_img}}" class="activity"></image>
+        <s-spu-scroll
+                theme="{{themeE}}"
+                spu-list="{{themeESpu}}"
+                wx:if="{{themeE.online}}">
 
-    </s-spu-scroll>
-    <image src="{{themeF.entrance_img}}" class="quality"></image>
+        </s-spu-scroll>
+        <image src="{{themeF.entrance_img}}" class="quality"></image>
 
-    <s-hot-list banner="{{bannerG}}">
-    </s-hot-list>
-    <image src="{{themeH.entrance_img}}" class="fashion"></image>
-    <view class="spu-bottom">
-        <image class="title-spu-bottom" src="../../imgs/home/download.png"></image>
-        <view>
-            <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+        <s-hot-list banner="{{bannerG}}">
+        </s-hot-list>
+        <image src="{{themeH.entrance_img}}" class="fashion"></image>
+        <view class="spu-bottom">
+            <image class="title-spu-bottom" src="../../imgs/home/download.png"></image>
+            <view>
+                <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+            </view>
         </view>
     </view>
-</view>
+</l-loadmore>
