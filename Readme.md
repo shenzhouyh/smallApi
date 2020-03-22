@@ -170,3 +170,15 @@
   - 长页面的加载状态应该只有两种，加载中和没有更多数据
   - 加载中状态是常态，在没有更多数据这个状态之前，底部应该都是加载中的状态
   - 加载完成只是个中间状态，用于每次分页的请求，可以不作为状态考虑
+### 第十二天
+- 小程序页面跳转
+  - 使用navigateTo函数
+  - 事件触发和数据绑定
+    `<image class="img" bind:tap="onImgLoad" data-pid="{{data.id}}" src="{{data.img}}"></image>`
+  - 页面参数绑定的获取
+    `const pid = event.currentTarget.dataset.pid;
+      wx.navigateTo({
+        url: `../../pages/detail?id=${pid}`
+      })`
+  - 复习SPU和SKU的概念
+  - 项目中问题的思考需要加深，注重个人独立完成能力的培养
