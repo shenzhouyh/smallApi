@@ -1,9 +1,9 @@
 // pages/home/home.js
-import {Banner} from "../../model/banner";
-import {CategoryGrid} from "../../model/categoryGrid";
-import {Activity} from "../../model/activity";
-import {theme} from "../../model/theme";
-import {SpuPaging} from "../../model/spu-paging";
+import {Banner} from "../../models/banner";
+import {CategoryGrid} from "../../models/categoryGrid";
+import {Activity} from "../../models/activity";
+import {theme} from "../../models/theme";
+import {SpuPaging} from "../../models/spu-paging";
 
 Page({
 
