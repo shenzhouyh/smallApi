@@ -1,18 +1,23 @@
 // pages/detail/detail.js
+import {Spu} from "../../models/spu";
+
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-
-  },
+  data: {},
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const pid = options.pid;
+    console.log("pid" + pid)
+    const spu = Spu.getDetail(pid);
+    this.setData({
+      spu
+    })
   },
 
   /**

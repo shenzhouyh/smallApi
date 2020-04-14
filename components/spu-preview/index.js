@@ -36,7 +36,7 @@ Component({
       console.log(event);
       const pid = event.currentTarget.dataset.pid;
       wx.navigateTo({
-        url: `../../pages/detail?id=${pid}`
+        url: `/pages/detail/detail?pid=${pid}`
       })
 
     }

@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "详情",
-  "usingComponents": {}
+  "usingComponents": {
+    "s-realm": "/components/realm/index"
+  }
 }
