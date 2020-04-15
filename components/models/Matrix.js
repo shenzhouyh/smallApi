@@ -21,6 +21,10 @@ class Matrix {
         return this.m[0].length
     }
 
+    /**
+     * 生成器写法，使用回调函数接收指定的行列值
+     * @param cb
+     */
     forEach(cb) {
         for (let j = 0; j < this.colsNum; j++) {
             for (let i = 0; i < this.rowsNum; i++) {
@@ -29,4 +33,8 @@ class Matrix {
             }
         }
     }
+}
+
+export {
+    Matrix
 }

@@ -11,10 +11,10 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: async function (options) {
     const pid = options.pid;
     console.log("pid" + pid)
-    const spu = Spu.getDetail(pid);
+    const spu = await Spu.getDetail(pid);
     this.setData({
       spu
     })

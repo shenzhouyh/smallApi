@@ -4,3 +4,16 @@
  @创建时间:2020-04-09 00:19
  @描述：
  */
+
+class Fence {
+    valueTitles = [];
+
+    pushValueTitle(title) {
+        this.valueTitles.push(title);
+    }
+
+}
+
+export {
+    Fence
+}

@@ -9,7 +9,7 @@ import {http} from "../utils/http";
 class Spu {
     static getDetail(pid) {
         return http.request({
-            url: `v1/spu/id/${pid}/detail`
+            url: `/spu/id/${pid}/detail`
         });
     }
 }
