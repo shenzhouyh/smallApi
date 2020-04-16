@@ -18,8 +18,8 @@ class FenceGroup {
     }
 
     initFence() {
-        console.log("spu" + this.spu);
-        console.log("skuList" + this.skuList);
+        console.log("spu", this.spu);
+        console.log("skuList", this.skuList);
         const matrix = this._createMatrix(this.skuList);
         const fences = [];
         let temp = -1;
@@ -34,8 +34,20 @@ class FenceGroup {
             fences[j].pushValueTitle(element.value)
         });
         console.log(fences);
+    }
 
+    initFenceByTranspose() {
+        const matrix = this._createMatrix(this.skuList);
+        const fences = [];
+        let AT = matrix.transpose();
+        console.log("转置之后的值", AT)
+        AT.forEach(row => {
+            let fence = new Fence(row);
+            fence.init();
+            fences.push(fence);
+        })
 
+        console.log("使用转置方式获取的fence值", fences);
     }
 
     _createFence() {

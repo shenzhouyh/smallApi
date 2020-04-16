@@ -25,7 +25,7 @@ Component({
       }
       console.log("********" + spu);
       const fenceGroup = new FenceGroup(spu);
-      fenceGroup.initFence();
+      fenceGroup.initFenceByTranspose();
     }
   }
   /**

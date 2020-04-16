@@ -33,6 +33,19 @@ class Matrix {
             }
         }
     }
+
+//矩阵的转置
+    transpose() {
+        const desArr = [];
+        for (let j = 0; j < this.colsNum; j++) {
+            const temp = [];
+            for (let i = 0; i < this.rowsNum; i++) {
+                temp.push(this.m[i][j]);
+            }
+            desArr.push(temp);
+        }
+        return desArr;
+    }
 }
 
 export {
