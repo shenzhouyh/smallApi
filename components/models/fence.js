@@ -4,10 +4,12 @@
  @创建时间:2020-04-09 00:19
  @描述：
  */
+import {Cell} from "./cell";
 
 class Fence {
     valueTitles = [];
     specs = [];
+    cells = [];
 
     constructor(specs) {
         this.specs = specs;
@@ -16,7 +18,8 @@ class Fence {
 //初始化
     init() {
         this.specs.forEach(s => {
-            this.pushValueTitle(s.value);
+            const tempCell = new Cell(s.value)
+            this.cells.push(tempCell);
         })
     }
 
