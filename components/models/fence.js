@@ -24,8 +24,21 @@ class Fence {
 
 //初始化
     init() {
+        this._initCell();
+    }
+
+//使用some对cell进行去重
+    _initCell() {
         this.specs.forEach(s => {
-            const tempCell = new Cell(s)
+            this.cells.includes(tempCell);
+            //判断cell是否存在，some和every的区别
+            let exist = this.cells.some(c => {
+                return c.value_id === s.value_id;
+            });
+            if (exist) {
+                return;
+            }
+            const tempCell = new Cell(s);
             this.cells.push(tempCell);
         })
     }
