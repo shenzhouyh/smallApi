@@ -6,7 +6,7 @@
     <!--scroll-x开启横向滑动-->
     <scroll-view scroll-x class="scroll-view">
         <view class="inner">
-            <block wx:for="{{spuList}}">
+            <block wx:for="{{spuList}}" wx:key="*this">
                 <view class="spu-container">
                     <image src="{{item.img}}" class="spu-img"></image>
                     <text class="spu-text">{{item.title.length>8?s.substring(item.title,0,7)+"...":item.title}}</text>

@@ -6,10 +6,14 @@
  */
 
 class Cell {
+    //规格值的名称
     title;
+    //规格值的ID
+    id;
 
-    constructor(title) {
-        this.title = title
+    constructor(specs) {
+        this.title = specs.value;
+        this.id = specs.value_id;
     }
 }
 

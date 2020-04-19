@@ -5,7 +5,7 @@
 
         <!--轮播图组件-->
         <swiper class="swiper-img" indicator-dots="{{true}}" autoplay circular>
-            <block wx:for="{{bannerB.items}}">
+            <block wx:for="{{bannerB.items}}" wx:key="*this">
                 <!--自定义插槽-->
                 <swiper-item>
                     <image src="{{item.img}}" class="swiper-img"></image>

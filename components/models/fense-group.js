@@ -17,7 +17,7 @@ class FenceGroup {
         this.skuList = spu.sku_list;
     }
 
-    initFence() {
+    /*initFence() {
         console.log("spu", this.spu);
         console.log("skuList", this.skuList);
         const matrix = this._createMatrix(this.skuList);
@@ -34,7 +34,7 @@ class FenceGroup {
             fences[j].pushValueTitle(element.value)
         });
         console.log(fences);
-    }
+    }*/
 
     initFenceByTranspose() {
         const matrix = this._createMatrix(this.skuList);
