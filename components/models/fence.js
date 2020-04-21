@@ -30,10 +30,9 @@ class Fence {
 //使用some对cell进行去重
     _initCell() {
         this.specs.forEach(s => {
-            this.cells.includes(tempCell);
             //判断cell是否存在，some和every的区别
-            let exist = this.cells.some(c => {
-                return c.value_id === s.value_id;
+            const exist = this.cells.some(c => {
+                return c.id == s.value_id;
             });
             if (exist) {
                 return;
