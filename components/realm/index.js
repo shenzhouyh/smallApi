@@ -25,11 +25,22 @@ Component({
       }
       console.log("********" + spu);
       const fenceGroup = new FenceGroup(spu);
+      //初始化fenceGroup
       fenceGroup.initFenceByTranspose();
-    }
-  }
+      this.bindFenceGroup(fenceGroup);
+      console.log("fences初始化之后", fenceGroup.fences);
+    },
+
+  },
   /**
    * 组件的方法列表
    */
-
+  methods: {
+    bindFenceGroup(fenceGroup) {
+      this.setData({
+        fences: fenceGroup.fences
+      })
+    }
+  }
 })
+

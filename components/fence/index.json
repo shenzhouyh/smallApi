@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "s-fence": "/components/fence/index"
+    "s-cell": "/components/cell/index"
   }
 }

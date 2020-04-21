@@ -11,6 +11,7 @@ class FenceGroup {
     spu;
     skuList = [];
     specs = [];
+    fences = [];
 
     constructor(spu) {
         this.spu = spu;
@@ -45,7 +46,8 @@ class FenceGroup {
             let fence = new Fence(row);
             fence.init();
             fences.push(fence);
-        })
+        });
+        this.fences = fences;
 
         console.log("使用转置方式获取的fence值", fences);
     }
