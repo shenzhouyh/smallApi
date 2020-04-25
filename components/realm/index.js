@@ -1,5 +1,5 @@
 // components/realm/index.js
-import {FenceGroup} from "../models/fense-group";
+import {FenceGroup} from "../models/fence-group";
 
 Component({
   /**

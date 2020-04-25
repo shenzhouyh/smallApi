@@ -1,1 +1,4 @@
-/* components/cell/index.wxss */
+.inner-container {
+    border: 1px solid #333333;
+    margin-right: 20rpx;
+}

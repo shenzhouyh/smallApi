@@ -34,7 +34,7 @@ class FenceGroup {
             }
             fences[j].pushValueTitle(element.value)
         });
-        console.log(fences);
+
     }*/
 
     initFenceByTranspose() {
